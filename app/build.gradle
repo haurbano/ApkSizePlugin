@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply from: '../apksize.gradle'
+apply plugin: 'com.haurbano.apksize'
 
 android {
     compileSdkVersion 30

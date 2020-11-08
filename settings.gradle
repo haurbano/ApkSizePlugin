@@ -1,2 +1,3 @@
+include ':ApkSizePlugin'
 include ':app'
 rootProject.name = "PluginTest"
