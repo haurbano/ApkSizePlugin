@@ -18,7 +18,7 @@ class APKSizePlugin implements Plugin<Project> {
     void apply(Project target) {
         target.task('apkSize') {
             doLast {
-                android.applicationVariants.all { variant ->
+                project.android.applicationVariants.all { variant ->
                     variant.outputs.each { output ->
                         def apkSize = output.outputFile.length()
                         def readableSize = formatSize(apkSize)
