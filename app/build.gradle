@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: '../apksize.gradle'
 
 android {
     compileSdkVersion 30
@@ -45,15 +46,3 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
-
-class APKSizePlugin implements Plugin<Project> {
-    void apply(Project project) {
-        project.task('apkSize') {
-            doLast {
-                println 'Hello from apk size plugin'
-            }
-        }
-    }
-}
-
-apply plugin: APKSizePlugin
