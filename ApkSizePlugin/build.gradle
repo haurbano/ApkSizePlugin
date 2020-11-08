@@ -1,0 +1,22 @@
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+
+dependencies {
+    implementation localGroovy()
+    implementation gradleApi()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.haurbano.apksize'
+            artifactId = 'apksize'
+            version = '1.3'
+
+            from components.java
+        }
+    }
+}
